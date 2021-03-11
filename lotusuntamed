@@ -1,0 +1,139 @@
+<!--
+	Ana Júlia da Cunha
+	102 informática
+
+	O fomulário deste exercício é mero exemplo, sei que há muitas coisas erradas por favor, professor, desconsidere esta parte e apenas analise a parte de css -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Atividade sobre Seletores</title>
+	<style>
+		:required {
+			color: red;
+		}
+
+		:optional {
+			color: blue;
+		}
+
+
+
+
+
+		table {
+			color: black;
+		}
+
+		.impar {
+			background-color: violet;
+		}
+
+		.par {
+			background-color: pink;
+
+		}
+
+
+
+
+		ul li::marker {
+			color: lime;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Atividade sobre Seletores.</h1>
+	<h2>Exercício 1:</h2>
+	<form>
+		<fieldset>
+			<div><label><strong>Nome: </strong></label> <input type="text" size="40" maxlength="70" placeholder="Digite seu nome completo..." required autofocus></div><br>
+
+			<div><label><strong>Idade: </strong></label><input type="number" id="idade" name="idade" required></div><br>
+
+			<div><label><strong>Sexo:</strong></label><br>
+			<input type="radio" name="sexo" value="Masculino">Masculino<br>
+			<input type="radio" name="sexo" value="Feminino">Feminino<br>
+			<input type="radio" name="sexo" value="Não binário">Não binário<br>
+			<input type="radio" name="sexo" value="Outro">Outro<br>
+			<input type="radio" name="sexo" value="nao diz">Prefiro não dizer</div><br>
+
+
+			<label><strong>Estado Civil: </strong></label><br>
+			<select>
+				<option value="solteiro" selected>Solteiro(a/e)</option>
+				<option value="casado">Casado(a/e)</option>
+				<option value="divorciado">Divorciado(a/e)</option>
+				<option value="viuvo">Viúvo(a/e)</option>
+			</select><br><br>
+
+			<div><label><strong>Qual meio de transporte você utiliza para ir à escola:</strong></label><br>
+			<input list="transporte" />
+			<datalist id="transporte">
+				<option value="Ônibus">
+				<option value="Bicicleta">
+				<option value="Carro">
+				<option value="Moto">
+				<option value="Caminhão">
+				<option value="Uber">
+				<option value="Outro">
+				<option value="Não utilizo meio de transporte">
+			</datalist></div><br>
+
+			<div><label><strong>Quais dispositivos eletrônicos sua família possui?</strong></label><br>
+			<input type="checkbox" name="dispositivos" value="Celular de teclado">Celular de teclado<br>
+			<input type="checkbox" name="dispositivos" value="Celular touch">Celular de tela touch<br>
+			<input type="checkbox" name="dispositivos" value="Computador">Computador<br>
+			<input type="checkbox" name="dispositivos" value="Notebook">Notebook<br>
+			<input type="checkbox" name="dispositivos" value="Televisão">Televisão<br>
+			<input type="checkbox" name="dispositivos" value="Ar condicionado">Ar condicionado<br>
+			<input type="checkbox" name="dispositivos" value="Outro">Outro</div><br>
+
+			<div><label><strong>Qual sua cor favorita?</strong></label>
+				<input type="color" name="cor favorita" value="#000000">
+			</div><br>
+
+			<div><label><strong>Nos conte um pouco sobre você:</strong></label><br>
+			<textarea id="sobre" name="sobre" rows="5" cols="40" placeholder="Nos conte sua história..."></textarea></div><br>
+
+			<div><label><strong>Senha:</strong></label> <input type="password" size="10" maxlength="10" required></div>
+		</fieldset>
+	</form>
+	<br><br><br><br>
+
+	<h2>Exercício 2:</h2><hr><br>
+	<table>
+			<caption>Informações básicas dos livros:</caption>
+			<tr class="impar"><th>Livro</th><th>Autor(a)</th><th>Editora</th><th>Páginas</th></tr>
+			<tr class="par"><td>O Beijo de Libra</td><td>Ruth Oliveira</td><td>Violeta</td><td>276</td></tr>
+			<tr class="impar"><td>As Peças Infernais: Anjo Mecânico</td><td>Cassandra Clare</td><td>Galera</td><td>392</td></tr>
+			<tr class="par"><td>O Reino das Vozes que não se calam</td><td>Carolina Munhóz e Sophia Abrahão</td><td>Rocco</td><td>285</td></tr>
+			<tr class="impar"><td>Cinderela Pop</td><td>Paula Pimenta</td><td>Galera</td><td>160</td></tr>
+			<tr class="par"><td>A Arte da Guerra</td><td>Sun Tzu</td><td>Mandras</td><td>128</td></tr>
+			<tr class="impar"><td>O Lado mais Sombrio</td><td>A. G. Howard</td><td>Novo Conceito</td><td>367</td></tr>
+	</table><br>
+	<br><br><br><br>
+
+	<h2>Exercício 3:</h2><hr>
+	<ul>
+ 		<li>Chocolate</li>
+ 		<li>Cookies</li>
+ 		<li>Torta de bolacha</li>
+	</ul>
+	<br><br><br><br>
+
+	<h2>Exercício 4 (DESAFIO!)</h2><hr><br>
+	<table>
+			<caption>Informações básicas dos livros:</caption>
+			<tr><th  class="impar">Livro</th><th class="par">Autor(a)</th><th class="impar">Editora</th><th class="par">Páginas</th></tr>
+			<tr><td class="impar">O Beijo de Libra</td><td class="par">Ruth Oliveira</td><td class="impar">Violeta</td><td class="par">276</td></tr>
+			<tr><td class="impar">As Peças Infernais: Anjo Mecânico</td><td class="par">Cassandra Clare</td><td class="impar">Galera</td><td class="par">392</td></tr>
+			<tr><td class="impar">O Reino das Vozes que não se calam</td><td class="par">Carolina Munhóz e Sophia Abrahão</td><td class="impar">Rocco</td><td class="par">285</td></tr>
+			<tr><td class="impar">Cinderela Pop</td><td class="par">Paula Pimenta</td><td class="impar">Galera</td><td class="par">160</td></tr>
+			<tr><td class="impar">A Arte da Guerra</td><td class="par">Sun Tzu</td><td class="impar">Mandras</td><td class="par">128</td></tr>
+			<tr><td class="impar">O Lado mais Sombrio</td><td class="par">A. G. Howard</td><td class="impar">Novo Conceito</td><td class="par">367</td></tr>
+	</table><br>
+</body>
+</html>
